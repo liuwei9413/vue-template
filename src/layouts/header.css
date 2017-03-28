@@ -1,0 +1,54 @@
+.pageHeader {
+  background-color: #1C1F28;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+}
+
+.nav-right {
+  display: inline-block;
+}
+
+.nav-item {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.pageHeader .el-menu {
+  background: #1C1F28;
+  margin-right: 20px;
+}
+
+.pageHeader .el-menu--horizontal .el-menu-item,
+.pageHeader .el-menu--horizontal .el-submenu .el-submenu__title {
+  height: 44px;
+  line-height: 44px;
+}
+
+.nav-item .el-input {
+  font-size: 13px;
+  width: auto;
+  margin-right: 20px;
+}
+
+.nav-item .el-input__icon {
+  height: 28px;
+}
+
+.nav-item .el-input__inner {
+  height: 28px;
+  background: #2E313F;
+  border-color: #2E313F;
+  color: #fff;
+}
+
+.nav-item .el-menu--horizontal .el-submenu>.el-menu {
+  top: 44px;
+}
+
+.nav-item .el-badge {
+  margin-right: 20px;
+  color: #fff;
+}

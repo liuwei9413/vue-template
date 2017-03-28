@@ -1,3 +1,6 @@
+import './css/base.css'
+import 'normalize.css'
+import '../ele-theme/index.css'
 import Vue from 'vue'
 import App from './App'
 import router from './router'

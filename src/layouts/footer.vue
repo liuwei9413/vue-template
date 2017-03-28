@@ -1,13 +1,12 @@
 <template>
-  <div id="app">
-    <router-view></router-view>
+  <div class="footer">
+  
   </div>
 </template>
 
 <script>
-
+import './footer.css'
 export default {
-  name: 'app'
+  name: 'pageFooter'
 }
-
 </script>

@@ -2,7 +2,7 @@
   "name": "management_template",
   "version": "1.0.0",
   "description": "element-ui and vue",
-  "author": " <>",
+  "author": "",
   "private": true,
   "scripts": {
     "ele:build": "rm -rf ele-theme && ./node_modules/.bin/et -o ele-theme",
@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "element-ui": "^1.2.5",
+    "normalize.css": "^6.0.0",
     "vue": "^2.2.2",
     "vue-chartjs": "^2.5.5",
     "vue-router": "^2.2.0"
