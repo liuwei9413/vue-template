@@ -5,8 +5,9 @@
   "author": " <>",
   "private": true,
   "scripts": {
-    "dev": "./node_modules/.bin/et -o ele-theme && node build/dev-server.js",
-    "build": "./node_modules/.bin/et -o ele-theme && node build/build.js",
+    "ele:build": "rm -rf ele-theme && ./node_modules/.bin/et -o ele-theme",
+    "dev": "npm run ele:build && node build/dev-server.js",
+    "build": "npm run ele:build && node build/build.js",
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
