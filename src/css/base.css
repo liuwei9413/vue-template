@@ -1,3 +1,20 @@
+* {
+  font-family: 'Microsoft Yahei', 'Avenir', Helvetica, Arial, sans-serif;
+}
+
 html, body {
   margin: 0;
+}
+
+.content-container {
+  padding: 44px 0 40px 200px;
+  box-sizing: border-box;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .3s ease;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
 }

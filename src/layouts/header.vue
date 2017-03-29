@@ -1,11 +1,9 @@
 <template>
   <div class="pageHeader">
-    <img src="../assets/vechain.png"
-         style="height:16px;margin:13px 0 0 20px;">
+    <img src="../assets/vechain.png">
     <div class="nav-right">
       <div class="nav-item">
-        <el-badge is-dot
-                  class="item">
+        <el-badge is-dot class="item">
           <i class="el-icon-message"></i>
         </el-badge>
         <el-badge class="item"><i class="el-icon-setting"></i></el-badge>
@@ -22,12 +20,12 @@
                  class="el-menu-demo"
                  mode="horizontal"
                  @select="handleSelect"
-                 router="true">
-          <el-menu-item index="1">个人中心</el-menu-item>
-          <el-submenu index="2">
+                 :router="true">
+          <el-menu-item index="user-center" :route="{name: 'hello'}">个人中心</el-menu-item>
+          <el-submenu index="haed-menu">
             <template slot="title">Sherry</template>
-            <el-menu-item index="2-1">系统管理</el-menu-item>
-            <el-menu-item index="/signin">注销</el-menu-item>
+            <el-menu-item index="haed-menu_management">系统管理</el-menu-item>
+            <el-menu-item index="haed-menu_logout">注销</el-menu-item>
           </el-submenu>
         </el-menu>
       </div>

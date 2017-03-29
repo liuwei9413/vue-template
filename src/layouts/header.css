@@ -8,12 +8,17 @@
 }
 
 .nav-right {
-  display: inline-block;
+  float: right;
 }
 
 .nav-item {
   display: inline-block;
   vertical-align: middle;
+}
+
+.pageHeader img {
+  height: 16px;
+  margin: 13px 0 0 20px;
 }
 
 .pageHeader .el-menu {

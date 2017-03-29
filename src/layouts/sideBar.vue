@@ -1,36 +1,29 @@
 <template>
   <div class="sidebar">
-    <p>Portal</p>
     <el-row class="tac">
       <el-col>
+        <h4>{{sidebar.title}}</h4>
         <el-menu default-active="2"
                  class="el-menu-vertical-demo"
                  @open="handleOpen"
                  @close="handleClose"
                  theme="dark"
-                 router="true">
-          <el-submenu index="1">
-            <template slot="title"><i class="el-icon-message"></i>点开我呀~</template>
-            <el-menu-item index="/">Dashboard</el-menu-item>
-            <el-menu-item index="/list">List</el-menu-item>
-            <el-menu-item index="/form">Form</el-menu-item>
-            <!--<template slot="title"><i class="el-icon-message"></i>导航一</template>
-                        <el-menu-item-group>
-                          <template slot="title">分组一</template>
-                          <el-menu-item index="1-1" >选项1</el-menu-item>
-                          <el-menu-item index="1-2" >选项2</el-menu-item>
-                        </el-menu-item-group>
-                        <el-menu-item-group title="分组2">
-                          <el-menu-item index="1-3">选项3</el-menu-item>
-                        </el-menu-item-group>
-                        <el-submenu index="1-4">
-                          <template slot="title">选项4</template>
-                          <el-menu-item index="1-4-1">选项1</el-menu-item>
-                        </el-submenu>-->
-          </el-submenu>
-          <el-menu-item index="/404"><i class="el-icon-warning"></i>404</el-menu-item>
-          <el-menu-item index="/500"><i class="el-icon-warning"></i>500</el-menu-item>
-          <el-menu-item index="/signin"><i class="el-icon-menu"></i>signin</el-menu-item>
+                 :router="true">
+          <template v-for="(item, i) in sidebar.menus">
+            <el-submenu v-if="item.subItems && item.subItems.length"
+                        :index="'sidebar' + i">
+              <template slot="title">
+                <i :class="item.iconClass || 'el-icon-menu'"></i>{{item.name}}
+              </template>
+              <el-menu-item v-for="(citem, cindex) in item.subItems"
+                            :key="item.id"
+                            :index="'sidebar' + i + '-' + cindex"
+                            :route="citem.path">{{citem.name}}</el-menu-item>
+            </el-submenu>
+            <el-menu-item v-else
+                          :index="'sidebar' + i"
+                          :route="item.path"><i :class="item.iconClass || 'el-icon-menu'"></i>{{item.name}}</el-menu-item>
+          </template>
         </el-menu>
       </el-col>
     </el-row>
@@ -40,6 +33,27 @@
 <script>
 import './sideBar.css'
 export default {
+  props: {
+    sidebar: {
+      type: Object,
+      validator: function (sidebar) {
+        let result = true
+        if (!('title' in sidebar)) {
+          console.error('required title in sidebar')
+          result = false
+        }
+        if (!('menus' in sidebar) || !(sidebar.menus instanceof Array)) {
+          console.error('required items(type Array) in sidebar')
+          result = false
+        }
+
+        return result
+      }
+    }
+  },
+  created() {
+    console.log(this.sidebar)
+  },
   name: 'sidebar',
   methods: {
     handleOpen(key, keyPath) {

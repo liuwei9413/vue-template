@@ -1,25 +1,28 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 // import Hello from '@/pages/demos/Hello'
-import Signin from '@/pages/Signin.vue'
-import logined from '@/pages/logined.vue'
+import Authorized from '@/pages/Authorized.vue'
+import Unauthorized from '@/pages/Unauthorized.vue'
+// routes
 import DemoRoutes from '@/pages/demos/routes.js'
+import DashboardRoutes from '@/pages/dashboard/routes.js'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      name: 'login',
+      name: 'unauthorized',
       path: '/login',
-      component: Signin
+      component: Unauthorized
     },
     {
-      name: 'loged',
+      name: 'authorized',
       path: '/',
-      component: logined,
+      component: Authorized,
       children: [
-        DemoRoutes
+        DemoRoutes,
+        DashboardRoutes
       ]
     }
   ]

@@ -5,8 +5,8 @@ let Hello = resolve => {
 }
 
 const DemoRoutes = {
+  name: 'hello',
   path: 'hello',
-  name: 'Hello',
   component: Hello
 }
 
