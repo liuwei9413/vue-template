@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-// import Hello from '@/pages/demos/Hello'
 import Authorized from '@/pages/Authorized.vue'
 import Unauthorized from '@/pages/Unauthorized.vue'
 // routes
@@ -21,7 +20,7 @@ export default new Router({
       path: '/',
       component: Authorized,
       children: [
-        DemoRoutes,
+        ...DemoRoutes,
         DashboardRoutes
       ]
     }

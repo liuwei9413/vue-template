@@ -34,8 +34,12 @@ export default {
             ],
             iconClass: 'el-icon-message'
           }, {
-            name: 'sub 3',
-            path: { name: 'hello' },
+            name: '404',
+            path: { name: 'notFound' },
+            iconClass: 'el-icon-warning'
+          }, {
+            name: '500',
+            path: { name: 'errorPage' },
             iconClass: 'el-icon-warning'
           }
         ]
