@@ -13,7 +13,7 @@
         <el-col :xs="24"
                 :sm="24"
                 :md="12">
-          <sec-title title="统计块"></sec-title>
+          <sec-title title="柱状图"></sec-title>
           <bar-chart :data="chartDatas.bar"
                       :options="chartOpts.bar"
                       :height="200"></bar-chart>
@@ -21,7 +21,7 @@
         <el-col :xs="24"
                 :sm="24"
                 :md="12">
-          <sec-title title="统计块"></sec-title>
+          <sec-title title="折线图"></sec-title>
           <line-chart :data="chartDatas.line2"
                       :options="chartOpts.line2"
                       :height="200"></line-chart>
@@ -33,7 +33,7 @@
         <el-col :xs="24"
                 :sm="24"
                 :md="12">
-          <sec-title title="统计块"></sec-title>
+          <sec-title title="面积图"></sec-title>
           <line-chart :data="chartDatas.line"
                       :options="chartOpts"
                       :height="200"></line-chart>
@@ -41,7 +41,7 @@
         <el-col :xs="24"
                 :sm="24"
                 :md="12">
-          <sec-title title="统计块"></sec-title>
+          <sec-title title="饼图"></sec-title>
           <pie-chart :data="chartDatas.pie"
                       :height="200"></pie-chart>
         </el-col>
