@@ -1,16 +1,16 @@
 let Hello = resolve => {
   require.ensure([], () => {
-    resolve(require('./Hello.vue'), 'demos')
+    resolve(require('./Hello.vue'))
   })
 }
 let notFoundPage = resolve => {
   require.ensure([], () => {
-    resolve(require('./page_404.vue'), 'demos')
+    resolve(require('./page_404.vue'))
   })
 }
 let errorPage = resolve => {
   require.ensure([], () => {
-    resolve(require('./page_500.vue'), 'demos')
+    resolve(require('./page_500.vue'))
   })
 }
 

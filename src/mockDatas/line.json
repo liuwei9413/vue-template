@@ -1,0 +1,16 @@
+{
+  "labels": ["a", "b", "c", "d", "e", "f", "g"
+  ],
+  "datasets": [
+    {
+      "label": "Data One",
+      "backgroundColor": "rgba(57, 199, 255, 0.3)",
+      "data": [15, 10, 25, 30, 20, 25, 10]
+    },
+    {
+      "label": "Data One",
+      "backgroundColor": "rgba(70, 211, 166, 0.3)",
+      "data": [20, 22, 15, 25, 30, 25, 20]
+    }
+  ]
+}
