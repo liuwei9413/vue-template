@@ -1,0 +1,62 @@
+{
+  "data": {
+    "labels": [
+      "Blue",
+      "Yellow",
+      "Green",
+      "Purple",
+      "Orange",
+      "Red",
+      "Blue",
+      "Yellow",
+      "Green",
+      "Purple",
+      "Orange"
+    ],
+    "datasets": [
+      {
+        "label": "Data",
+        "data": [
+          1,
+          2,
+          4,
+          5,
+          10,
+          11,
+          9,
+          7,
+          6,
+          4,
+          2
+        ],
+        "backgroundColor": "rgba(56,199,255,0.5)",
+        "borderColor": "rgba(56,199,255,1)",
+        "borderWidth": 1
+      }
+    ]
+  },
+  "options": {
+    "scales": {
+      "yAxes": [
+        {
+          "stacked": true,
+          "gridLines": {
+            "display": true
+          },
+          "ticks": {
+            "beginAtZero": true
+          }
+        }
+      ],
+      "xAxes": [
+        {
+          "barThickness": 25,
+          "stacked": true,
+          "gridLines": {
+            "display": true
+          }
+        }
+      ]
+    }
+  }
+}

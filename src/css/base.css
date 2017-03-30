@@ -1,5 +1,13 @@
 * {
+  margin: 0;
+  padding: 0;
+  /*box-sizing: border-box;*/
   font-family: 'Microsoft Yahei', 'Avenir', Helvetica, Arial, sans-serif;
+  font-size: 12px;
+}
+
+#app {
+  -webkit-font-smoothing: antialiased;
 }
 
 html, body {
@@ -7,8 +15,9 @@ html, body {
 }
 
 .content-container {
-  padding: 44px 0 40px 200px;
+  padding: 59px 15px 55px 215px;
   box-sizing: border-box;
+  height: 100%;
 }
 
 .fade-enter-active, .fade-leave-active {
@@ -17,4 +26,8 @@ html, body {
 
 .fade-enter, .fade-leave-to {
   opacity: 0;
+}
+
+section.row {
+  margin-bottom: 30px;
 }
