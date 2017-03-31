@@ -11,13 +11,16 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      name: 'unauthorized',
+      name: 'login',
       path: '/login',
       component: Unauthorized
     },
     {
       name: 'authorized',
       path: '/',
+      redirect: {
+        name: 'dashboard'
+      },
       component: Authorized,
       children: [
         ...DemoRoutes,

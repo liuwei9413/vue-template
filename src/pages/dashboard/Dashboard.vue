@@ -5,23 +5,23 @@
       <el-breadcrumb-item>控制台</el-breadcrumb-item>
     </el-breadcrumb>
     <section class="row">
-      <sec-title title="统计块"></sec-title>
-      <status :list="statusData"></status>
+      <section-title title="统计块"></section-title>
+      <status-card :list="statusData"></status-card>
     </section>
     <section class="row">
       <el-row :gutter="24">
         <el-col :xs="24"
                 :sm="24"
                 :md="12">
-          <sec-title title="柱状图"></sec-title>
+          <section-title title="柱状图"></section-title>
           <bar-chart :data="chartDatas.bar"
-                      :options="chartOpts.bar"
-                      :height="200"></bar-chart>
+                     :options="chartOpts.bar"
+                     :height="200"></bar-chart>
         </el-col>
         <el-col :xs="24"
                 :sm="24"
                 :md="12">
-          <sec-title title="折线图"></sec-title>
+          <section-title title="折线图"></section-title>
           <line-chart :data="chartDatas.line2"
                       :options="chartOpts.line2"
                       :height="200"></line-chart>
@@ -33,7 +33,7 @@
         <el-col :xs="24"
                 :sm="24"
                 :md="12">
-          <sec-title title="面积图"></sec-title>
+          <section-title title="面积图"></section-title>
           <line-chart :data="chartDatas.line"
                       :options="chartOpts"
                       :height="200"></line-chart>
@@ -41,9 +41,9 @@
         <el-col :xs="24"
                 :sm="24"
                 :md="12">
-          <sec-title title="饼图"></sec-title>
+          <section-title title="饼图"></section-title>
           <pie-chart :data="chartDatas.pie"
-                      :height="200"></pie-chart>
+                     :height="200"></pie-chart>
         </el-col>
       </el-row>
     </section>
@@ -56,9 +56,8 @@ import line2Data from '@/mockDatas/line2.json'
 import barData from '@/mockDatas/bar.json'
 import pieData from '@/mockDatas/pie.json'
 
-import charts from '@/components/charts'
-import status from '@/components/status.vue'
-import secTitle from '@/components/title.vue'
+import { lineChart, barChart, pieChart } from '@/components/charts'
+import { statusCard, sectionTitle } from '@/components/layouts'
 
 /** chart elements
  *   lineChart,
@@ -71,9 +70,11 @@ import secTitle from '@/components/title.vue'
 export default {
   name: 'dashboard',
   components: {
-    ...charts,
-    status,
-    secTitle
+    lineChart,
+    barChart,
+    pieChart,
+    statusCard,
+    sectionTitle
   },
   data() {
     return {

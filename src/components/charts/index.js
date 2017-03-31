@@ -1,15 +1,13 @@
-import lineChart from './LineChart.js'
-import pieChart from './pieChart.js'
-import barChart from './barChart.js'
-import bubbleChart from './bubbleChart.js'
-import doughnutChart from './doughnutChart.js'
-import radarChart from './radarChart.js'
+import line from './LineChart.js'
+import pie from './pieChart.js'
+import bar from './barChart.js'
+import bubble from './bubbleChart.js'
+import doughnut from './doughnutChart.js'
+import radar from './radarChart.js'
 
-export default {
-  lineChart,
-  pieChart,
-  barChart,
-  bubbleChart,
-  doughnutChart,
-  radarChart
-}
+export let lineChart = line
+export let pieChart = pie
+export let barChart = bar
+export let bubbleChart = bubble
+export let doughnutChart = doughnut
+export let radarChart = radar

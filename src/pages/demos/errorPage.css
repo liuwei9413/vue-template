@@ -1,0 +1,11 @@
+p.number {
+  font-size: 130px;
+}
+
+p.number.danger {
+  color: #E94D58;
+}
+
+p.h3 {
+  font-size: 20px;
+}

@@ -19,13 +19,12 @@
                  :default-active="activeIndex"
                  class="el-menu-demo"
                  mode="horizontal"
-                 @select="handleSelect"
                  :router="true">
           <el-menu-item index="user-center" :route="{name: 'hello'}">个人中心</el-menu-item>
           <el-submenu index="haed-menu">
             <template slot="title">Sherry</template>
-            <el-menu-item index="haed-menu_management">系统管理</el-menu-item>
-            <el-menu-item index="haed-menu_logout">注销</el-menu-item>
+            <el-menu-item index="haed-menu_management" :route="{name: 'hello'}">系统管理</el-menu-item>
+            <el-menu-item @click="logout" index="">注销</el-menu-item>
           </el-submenu>
         </el-menu>
       </div>
@@ -47,6 +46,10 @@ export default {
   methods: {
     handleSelect(key, keyPath) {
       console.log(key, keyPath)
+    },
+    logout($e) {
+      console.log($e)
+      this.$router.push({name: 'login'})
     }
   }
 }

@@ -1,10 +1,12 @@
 <template>
   <div>
     <pageheader></pageheader>
-    <pagesidebar :sidebar="menuItems"></pagesidebar>
-    <transition name="fade" mode="out-in">
-      <router-view class="content-container"></router-view>
-    </transition>
+    <pagesidebar :sidebar="menuItems" :default-index="itemTest"></pagesidebar>
+    <div class="content-container">
+      <transition name="fade">
+        <router-view></router-view>
+      </transition>
+    </div>
     <pagefooter></pagefooter>
   </div>
 </template>
@@ -16,6 +18,7 @@ import pagesidebar from '@/layouts/sidebar.vue'
 export default {
   data() {
     return {
+      name: 'app',
       menuItems: {
         title: 'Portal',
         menus: [
@@ -43,10 +46,10 @@ export default {
             iconClass: 'el-icon-warning'
           }
         ]
-      }
+      },
+      itemTest: 'sidebar-0'
     }
   },
-  name: 'app',
   components: {
     pageheader,
     pagefooter,
