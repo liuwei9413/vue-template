@@ -22,7 +22,7 @@
                 :sm="24"
                 :md="12">
           <section-title title="折线图"></section-title>
-          <line-chart :data="chartDatas.line2"
+          <line-chart v-if="chartDatas.line2" :data="chartDatas.line2"
                       :options="chartOpts.line2"
                       :height="200"></line-chart>
         </el-col>
@@ -52,7 +52,6 @@
 <script>
 import statusData from '@/mockDatas/status.json'
 import lineData from '@/mockDatas/line.json'
-import line2Data from '@/mockDatas/line2.json'
 import barData from '@/mockDatas/bar.json'
 import pieData from '@/mockDatas/pie.json'
 
@@ -81,16 +80,25 @@ export default {
       chartDatas: {
         line: lineData.data,
         bar: barData.data,
-        line2: line2Data.data,
+        line2: '',
         pie: pieData.data
       },
       chartOpts: {
         line: lineData.options,
         bar: barData.options,
-        line2: line2Data.options
+        line2: ''
       },
       statusData
     }
+  },
+  created() {
+    let _this = this
+    _this.$store.dispatch('charts/LINE_DATA').then((resp) => {
+      // _this.chartDatas.line = resp.data
+      console.log(resp)
+      _this.$set(_this.chartDatas, 'line2', resp.data)
+      _this.$set(_this.chartOpts, 'line2', resp.options)
+    })
   }
 }
 </script>

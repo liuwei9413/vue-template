@@ -68,14 +68,12 @@ export default {
           }
         ]
       },
-      defaultItem: 'sidebar-0'
+      defaultItem: ''
     }
   },
-  // created() {
-  //   window.MPApp.$on('router-changed-for-menu', function ({ name }) {
-  //     console.log(name)
-  //   })
-  // },
+  created() {
+    this.defaultItem = this.$route.name
+  },
   watch: {
     $route() {
       this.defaultItem = this.$route.name

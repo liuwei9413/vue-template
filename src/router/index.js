@@ -30,8 +30,4 @@ const router = new Router({
   ]
 })
 
-// router.afterEach(route => {
-//   window.MPApp.$emit('router-changed-for-menu', {name: route.name})
-// })
-
 export default router
