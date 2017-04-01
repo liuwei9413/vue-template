@@ -12,7 +12,7 @@ Vue.config.productionTip = false
 Vue.use(ElementUI)
 
 /* eslint-disable no-new */
-new Vue({
+window.MPApp = new Vue({
   el: '#app',
   router,
   render: h => h(App)

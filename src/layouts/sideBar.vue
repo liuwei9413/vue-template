@@ -5,8 +5,6 @@
         <h4>{{sidebar.title}}</h4>
         <el-menu :default-active="defaultIndex"
                  class="el-menu-vertical-demo"
-                 @open="handleOpen"
-                 @close="handleClose"
                  theme="dark"
                  :router="true">
           <template v-for="(item, i) in sidebar.menus">
@@ -17,12 +15,12 @@
               </template>
               <el-menu-item v-for="(citem, cindex) in item.subItems"
                             :key="item.id"
-                            :index="'sidebar-' + i + '-' + cindex"
+                            :index="citem.path.name"
                             :route="citem.path">{{citem.name}}</el-menu-item>
             </el-submenu>
             <el-menu-item v-else
-                          :index="'sidebar-' + i"
-                          :route="item.path"><i :class="item.iconClass || 'el-icon-menu'"></i>{{item.name}}</el-menu-item>
+                          :index="item.path.name"
+                          :route="item.path">{{item.name}}</el-menu-item>
           </template>
         </el-menu>
       </el-col>
@@ -52,17 +50,7 @@ export default {
     },
     defaultIndex: String
   },
-  created() {
-    console.log(this.sidebar)
-  },
   name: 'sidebar',
-  methods: {
-    handleOpen(key, keyPath) {
-      console.log(key, keyPath)
-    },
-    handleClose(key, keyPath) {
-      console.log(key, keyPath)
-    }
-  }
+  methods: {}
 }
 </script>

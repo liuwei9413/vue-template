@@ -20,12 +20,6 @@ export default {
         width: this.width
       }
     }
-  },
-  mounted() {
-    this.$el.parentElement.style.height = '100%'
-  },
-  beforeDestroy() {
-    this.$el.parentElement.style.height = ''
   }
 }
 </script>

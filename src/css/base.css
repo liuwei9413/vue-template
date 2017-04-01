@@ -20,6 +20,7 @@ html, body, #app, #app >div {
   padding: 59px 15px 55px 215px;
   box-sizing: border-box;
   min-height: 100%;
+  height: 100%;
 }
 .container-border {
   width: 100%;
@@ -37,4 +38,7 @@ html, body, #app, #app >div {
 
 section.row {
   margin-bottom: 30px;
+}
+.mp-height-add {
+  padding-bottom: 30px;
 }

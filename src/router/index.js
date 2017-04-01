@@ -8,7 +8,7 @@ import DashboardRoutes from '@/pages/dashboard/routes.js'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   routes: [
     {
       name: 'login',
@@ -29,3 +29,9 @@ export default new Router({
     }
   ]
 })
+
+// router.afterEach(route => {
+//   window.MPApp.$emit('router-changed-for-menu', {name: route.name})
+// })
+
+export default router

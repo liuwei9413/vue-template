@@ -1,10 +1,12 @@
 <template>
   <div>
-    <pageheader></pageheader>
-    <pagesidebar :sidebar="menuItems" :default-index="itemTest"></pagesidebar>
+    <pageheader :default-index="defaultItem"
+                :headmenus="headerItems"></pageheader>
+    <pagesidebar :sidebar="sideItems"
+                 :default-index="defaultItem"></pagesidebar>
     <div class="content-container">
       <transition name="fade">
-        <router-view></router-view>
+        <router-view class="mp-height-add"></router-view>
       </transition>
     </div>
     <pagefooter></pagefooter>
@@ -19,7 +21,7 @@ export default {
   data() {
     return {
       name: 'app',
-      menuItems: {
+      sideItems: {
         title: 'Portal',
         menus: [
           {
@@ -47,7 +49,36 @@ export default {
           }
         ]
       },
-      itemTest: 'sidebar-0'
+      headerItems: {
+        menus: [
+          {
+            name: '个人中心',
+            path: { name: 'hello' }
+          }, {
+            name: 'Sharry',
+            subItems: [
+              {
+                name: '系统设置',
+                path: { name: 'hello' }
+              }, {
+                name: '注销',
+                path: { name: 'login' }
+              }
+            ]
+          }
+        ]
+      },
+      defaultItem: 'sidebar-0'
+    }
+  },
+  // created() {
+  //   window.MPApp.$on('router-changed-for-menu', function ({ name }) {
+  //     console.log(name)
+  //   })
+  // },
+  watch: {
+    $route() {
+      this.defaultItem = this.$route.name
     }
   },
   components: {
