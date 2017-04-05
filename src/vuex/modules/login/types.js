@@ -1,0 +1,2 @@
+export const CHECK_USERNAME = 'CHECK_USERNAME'
+export const CHECK_PASSWORD = 'CHECK_PASSWORD'

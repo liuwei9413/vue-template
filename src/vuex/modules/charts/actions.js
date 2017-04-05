@@ -9,7 +9,7 @@ export default {
     let p = new Promise((resolve, reject) => {
       setTimeout(function () {
         resolve(lineData)
-      }, 5000)
+      }, 2500)
     })
 
     return p

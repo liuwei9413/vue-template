@@ -1,1 +1,1 @@
-export const LINE_DATA = 'charts/LINE_DATA'
+export const LINE_DATA = 'LINE_DATA'

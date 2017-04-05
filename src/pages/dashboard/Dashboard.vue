@@ -93,7 +93,7 @@ export default {
   },
   created() {
     let _this = this
-    _this.$store.dispatch('charts/LINE_DATA').then((resp) => {
+    _this.$store.dispatch('LINE_DATA').then((resp) => {
       // _this.chartDatas.line = resp.data
       console.log(resp)
       _this.$set(_this.chartDatas, 'line2', resp.data)
