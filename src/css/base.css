@@ -17,11 +17,12 @@ html, body, #app, #app >div {
 }
 
 .content-container {
-  padding: 59px 15px 55px 215px;
+  padding: 44px 0px 40px 200px;
   box-sizing: border-box;
   min-height: 100%;
   height: 100%;
 }
+
 .container-border {
   width: 100%;
   height: 100%;
@@ -39,6 +40,10 @@ html, body, #app, #app >div {
 section.row {
   margin-bottom: 30px;
 }
+
 .mp-height-add {
-  padding-bottom: 30px;
+  margin-bottom: 30px;
+  min-height: 100%;
+  padding: 15px;
+  box-sizing: border-box;
 }

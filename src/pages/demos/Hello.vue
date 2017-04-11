@@ -1,6 +1,6 @@
 <template>
-  <div class="hello">
-    hello massage
+  <div class="hello" v-loading="loading">
+    hello massage <span>{{msg}}</span>
   </div>
 </template>
 
@@ -9,14 +9,15 @@ export default {
   name: 'hello',
   data() {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      loading: true
     }
   },
-  beforeRouteEnter(to, from, next) {
-    setTimeout(function() {
-      next(vm => {
-        vm.msg = '99999999'
-      })
+  created() {
+    let _t = this
+    setTimeout(function () {
+      _t.msg = '99999999'
+      _t.loading = false
     }, 2000)
   }
 }
