@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "element-ui": "^1.2.5",
+    "js-cookie": "^2.1.4",
     "normalize.css": "^6.0.0",
     "vue": "^2.2.2",
     "vue-chartjs": "^2.5.5",
