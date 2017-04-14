@@ -11,6 +11,7 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
+    "chartjs": "^0.3.24",
     "element-ui": "^1.2.5",
     "js-cookie": "^2.1.4",
     "normalize.css": "^6.0.0",
