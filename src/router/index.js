@@ -4,7 +4,6 @@ import Authorized from '@/pages/Authorized.vue'
 import Unauthorized from '@/pages/Unauthorized.vue'
 // routes
 import DemoRoutes from '@/pages/demos/routes.js'
-import DashboardRoutes from '@/pages/dashboard/routes.js'
 
 Vue.use(Router)
 
@@ -23,8 +22,7 @@ const router = new Router({
       },
       component: Authorized,
       children: [
-        ...DemoRoutes,
-        DashboardRoutes
+        ...DemoRoutes
       ]
     }
   ]

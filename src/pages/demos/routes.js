@@ -14,6 +14,18 @@ let errorPage = resolve => {
   })
 }
 
+let Dashboard = resolve => {
+  require.ensure([], () => {
+    resolve(require('./Dashboard.vue'))
+  })
+}
+
+let eleDemo = resolve => {
+  require.ensure([], () => {
+    resolve(require('./element-theme-demo.vue'))
+  })
+}
+
 const DemoRoutes = [
   {
     name: 'hello',
@@ -27,6 +39,14 @@ const DemoRoutes = [
     name: 'errorPage',
     path: 'errorPage',
     component: errorPage
+  }, {
+    name: 'eledemo',
+    path: 'eledemo',
+    component: eleDemo
+  }, {
+    name: 'dashboard',
+    path: 'dashboard',
+    component: Dashboard
   }
 ]
 

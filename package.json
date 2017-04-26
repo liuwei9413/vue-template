@@ -11,13 +11,14 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
+    "axios": "^0.16.1",
     "chart.js": "^2.5.0",
     "element-ui": "^1.2.5",
     "js-cookie": "^2.1.4",
     "normalize.css": "^6.0.0",
     "vue": "^2.2.2",
     "vue-chartjs": "^2.5.5",
-    "vue-resource": "^1.2.1",
+    "vue-i18n": "^6.1.1",
     "vue-router": "^2.2.0",
     "vuex": "^2.2.1"
   },

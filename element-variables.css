@@ -15,7 +15,7 @@
 
   --color-success: #23D0A4;
   --color-warning: #F9C64C;
-  --color-danger: #ff4949;
+  --color-danger: #F05C5C;
   --color-info: #50bfff;
 
   --color-secondary: color(var(--color-primary) s(99%) l(*0.9));

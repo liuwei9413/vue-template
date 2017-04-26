@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import './serviceConfig.js'
 
 import charts from './modules/charts'
 import login from './modules/login'

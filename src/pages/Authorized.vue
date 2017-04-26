@@ -35,6 +35,10 @@ export default {
               {
                 name: 'Hello',
                 path: { name: 'hello' }
+              },
+              {
+                name: 'Element',
+                path: { name: 'eledemo' }
               }
             ],
             iconClass: 'el-icon-message'
