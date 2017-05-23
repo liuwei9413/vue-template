@@ -13,8 +13,7 @@ const router = new Router({
       name: 'login',
       path: '/login',
       component: Unauthorized
-    },
-    {
+    }, {
       name: 'authorized',
       path: '/',
       redirect: {

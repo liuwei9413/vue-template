@@ -1,30 +1,7 @@
-let Hello = resolve => {
-  require.ensure([], () => {
-    resolve(require('./Hello.vue'))
-  })
-}
-let notFoundPage = resolve => {
-  require.ensure([], () => {
-    resolve(require('./page_404.vue'))
-  })
-}
-let errorPage = resolve => {
-  require.ensure([], () => {
-    resolve(require('./page_500.vue'))
-  })
-}
-
-let Dashboard = resolve => {
-  require.ensure([], () => {
-    resolve(require('./Dashboard.vue'))
-  })
-}
-
-let eleDemo = resolve => {
-  require.ensure([], () => {
-    resolve(require('./element-theme-demo.vue'))
-  })
-}
+const Hello = r => require.ensure([], () => r(require('./Hello.vue')), 'demos')
+const notFoundPage = r => require.ensure([], () => r(require('./page_404.vue')), 'demos')
+const errorPage = r => require.ensure([], () => r(require('./page_500.vue')), 'demos')
+const Dashboard = r => require.ensure([], () => r(require('./Dashboard.vue')), 'demos')
 
 const DemoRoutes = [
   {
@@ -39,10 +16,6 @@ const DemoRoutes = [
     name: 'errorPage',
     path: 'errorPage',
     component: errorPage
-  }, {
-    name: 'eledemo',
-    path: 'eledemo',
-    component: eleDemo
   }, {
     name: 'dashboard',
     path: 'dashboard',
