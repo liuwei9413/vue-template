@@ -1,8 +1,9 @@
-import { Pie } from 'vue-chartjs/es'
+import { Pie } from 'vue-chartjs'
 
-export default Pie.extend({
+export default {
+  extends: Pie,
   props: ['data', 'options'],
   mounted() {
     this.renderChart(this.data, this.options)
   }
-})
+}

@@ -1,8 +1,9 @@
-import { Bubble } from 'vue-chartjs/es'
+import { Bubble } from 'vue-chartjs'
 
-export default Bubble.extend({
+export default {
+  extends: Bubble,
   props: ['data', 'options'],
   mounted() {
     this.renderChart(this.data, this.options)
   }
-})
+}

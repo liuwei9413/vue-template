@@ -1,8 +1,9 @@
-import { Radar } from 'vue-chartjs/es'
+import { Radar } from 'vue-chartjs'
 
-export default Radar.extend({
+export default {
+  extends: Radar,
   props: ['data', 'options'],
   mounted() {
     this.renderChart(this.data, this.options)
   }
-})
+}

@@ -24,11 +24,11 @@ export default {
       sideItems: {
         title: 'Portal',
         menus: [
-          {
-            name: 'Dashboard',
-            path: { name: 'dashboard' },
-            iconClass: 'el-icon-warning'
-          },
+          // {
+          //   name: 'Dashboard',
+          //   path: { name: 'dashboard' },
+          //   iconClass: 'el-icon-warning'
+          // },
           {
             name: 'Demos',
             subItems: [
