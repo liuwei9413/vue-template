@@ -1,0 +1,180 @@
+.content-box-wrap {
+  min-height: 600px;
+}
+.content-box {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 1000px;
+  height: auto;
+  background-color: #FFF;
+}
+
+.mt20 {
+   margin-bottom: 20px;
+}
+
+.w200 {
+  width: 200px;
+}
+
+a.download {
+  color: #409EFF;
+  text-decoration: none;
+}
+a.download:hover {
+  color: #66b1ff;
+}
+a.download-white, a.download-white:hover {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.step-title {
+  margin-bottom: 20px;
+  height: 60px;
+  line-height: 1.5;
+  font-size: 28px;
+  text-align: center;
+}
+
+.content-box .item-text {
+  margin: 0 auto 30px;
+  width: 600px;
+  line-height: 1.5;
+}
+
+.item-text span {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.item-text .label-text {
+  margin-right: 8px;
+}
+
+.item-text .nums {
+  position: relative;
+  width: 160px;
+}
+
+.item-text .nums .error-tip {
+  font-size: 12px; 
+}
+
+.nums .el-date-editor.el-input {
+  width: 140px;
+}
+
+.item-text .end-height{
+  width: 80px;
+}
+
+.remark {
+  width: 340px;  
+  color: #999;
+}
+
+.item-text .link {
+  height: 16px;
+  line-height: 1;
+}
+
+.item-button {
+  margin-bottom: 70px;
+  padding: 30px 0 30px;
+  text-align: center;
+}
+
+.instruction {
+  padding: 30px;
+  background-color: #fff;
+}
+
+.instruction p {
+  line-height: 1.5;
+}
+
+.el-message-box__title span{
+  font-size: 18px;
+  color: #303133;
+}
+
+.content-box .loading {
+  margin-bottom: 70px;
+  height: 100px;
+}
+
+.file-box {
+  margin: 0 auto;
+  width: 660px;
+  height: auto;
+}
+
+.file-box .item-label {
+  margin-bottom: 20px;
+}
+
+.file-box .file-info {
+  margin-bottom: 20px;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 18px;  
+  border: 1px dotted #ccc;
+}
+
+.file-box .file-table {
+  margin-bottom: 20px;
+}
+
+.content-box .download, .content-box .reload {
+  text-align: center;
+}
+
+.content-box .download .el-button,.content-box .reload .el-button {
+  margin-bottom: 50px;
+  width: 200px;
+}
+
+.content-box .unfinished-tip {
+  margin: 50px 0 60px;
+  color: #f56c6c;
+  text-align: center;
+}
+
+.upload-box {
+  padding-bottom: 30px;
+}
+
+.item-footer {
+  margin-top: 50px;
+}
+
+.status-info {
+  padding: 30px;
+  line-height: 1.5;
+  border-top: 1px solid #eee;
+}
+
+.status-success {
+  /* background-color: lightgreen; */
+}
+
+.dialog-check .subtitle {
+  margin-bottom: 24px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.el-dialog--center .el-dialog__body {
+  padding: 0 35px 0 25px;
+}
+
+/* 交易记录样式 */
+.list-footer {
+  margin: 30px 0;
+  text-align: center;
+}

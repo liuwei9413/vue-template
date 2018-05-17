@@ -1,31 +1,11 @@
 .sidebar {
-  width: 200px;
   position: fixed;
-  padding-top: 44px;
+  top: 60px;
   left: 0;
+  width: 240px;
   height: 100%;
   overflow: auto;
   padding-bottom: 45px;
-  background: #252935;
+  /* background: #252935; */
   box-sizing: border-box;
-}
-
-.sidebar h4 {
-  font-size: 18px;
-  color: #fff;
-  padding: 30px 0 30px 20px;
-  margin: 0;
-  font-weight: bold;
-}
-
-.sidebar .el-menu, .sidebar .el-submenu {
-  background: #252935;
-}
-
-.sidebar .el-menu--dark .el-submenu .el-menu {
-  background: #2E313F;
-}
-
-.sidebar .el-menu--dark .el-menu-item:hover, .sidebar .el-menu--dark .el-submenu__title:hover {
-  background: #45495A;
 }

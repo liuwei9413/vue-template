@@ -1,59 +1,32 @@
-.pageHeader {
-  background-color: #1C1F28;
+.page-header {
   position: fixed;
+  z-index: 1000;
   top: 0;
-  left: 0;
-  z-index: 999;
+  box-sizing: border-box;
+  padding: 0 30px;
   width: 100%;
+  height: 60px;
+  line-height: 60px;
+  background-color: rgb(64, 158, 255);
+  font-size: 14px;
+  color: #FFF;
 }
 
-.nav-right {
-  float: right;
-}
-
-.nav-item {
+.page-header h2 {
   display: inline-block;
-  vertical-align: middle;
+  font-size: 20px;
 }
 
-.pageHeader img {
-  height: 16px;
-  margin: 13px 0 0 20px;
+.page-header .username {
+  float: right;
+  margin-left: 15px;
 }
 
-.pageHeader .el-menu {
-  background: #1C1F28;
-  margin-right: 20px;
+.page-header .logout {
+  float: right;
+  margin: 10px 0 0 15px;
 }
 
-.pageHeader .el-menu--horizontal .el-menu-item,
-.pageHeader .el-menu--horizontal .el-submenu .el-submenu__title {
-  height: 44px;
-  line-height: 44px;
-}
-
-.nav-item .el-input {
-  font-size: 13px;
-  width: auto;
-  margin-right: 20px;
-}
-
-.nav-item .el-input__icon {
-  height: 28px;
-}
-
-.nav-item .el-input__inner {
-  height: 28px;
-  background: #2E313F;
-  border-color: #2E313F;
-  color: #fff;
-}
-
-.nav-item .el-menu--horizontal .el-submenu>.el-menu {
-  top: 44px;
-}
-
-.nav-item .el-badge {
-  margin-right: 20px;
-  color: #fff;
+.page-header .el-button--text {
+  color: #FFF;
 }

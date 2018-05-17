@@ -1,0 +1,28 @@
+{
+    "code":1,
+    "data":{
+        "operID":1,
+        "updateTs":1525279912,
+        "range":{
+            "from":30000,
+            "to":450000
+        },
+        "ethTotalTrans":185,
+        "thorTotalTrans":19,
+        "totalAmount":24820000000000000000,
+        "operExportUser":"oper1",
+        "operSendUser":"oper2",
+        "status":"1",
+        "progressInfo":{
+            "total":19,
+            "progress":11,
+            "message":"正在校验第***笔交易",
+            "data":{
+                "signfile":{
+                    "filename":"1-20180711-081052-35000-40000.json",
+                    "url":"https://vechain-demo-dev.oss-cn-shanghai.aliyuncs.com/1-20180711-081052-35000-40000.json"
+                }
+            }
+        }
+    }
+}

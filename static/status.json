@@ -1,0 +1,10 @@
+{
+  "data": {
+    "status": true,
+    "status2": false,
+    "progress": "0/238",
+    "status3": 5,
+    "status7": 7,
+    "file_name": "status.json"
+  }
+}

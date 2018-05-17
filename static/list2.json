@@ -1,0 +1,18 @@
+{
+  "data": {
+    "id": "1",
+    "file_name": "25-20180909-211744-456777-600000",
+    "file_type": "txt",
+    "rows": [
+      {
+        "id": "111",
+        "date": "2018/04/04 20:30",
+        "fanwei": "3501-4000",
+        "bishu": "238",
+        "zongjine": "2345.3243VET",
+        "caozuoren": "liuwei；liuwei2",
+        "status": "1"
+      }
+    ]
+  }
+}

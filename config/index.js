@@ -24,19 +24,22 @@ module.exports = {
   dev: {
     env: require('./dev.env'),
     port: 4000,
-    autoOpenBrowser: false,
+    autoOpenBrowser: true,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {
-      proxy: {
-        target: 'http://api.bitse.com:4000',
-        changeOrigin: true,
-        filter: function(path, req) {
-          const paths = ['/accounttokens']
-          return paths.includes(path)
-        }
-      }
-    },
+    proxyTable: {},
+    // proxyTable: {
+    //   proxy: {
+    //     target: 'http://192.168.40.126:8030/',
+    //     changeOrigin: true,
+    //     filter: function(path, req) {
+    //       if (path.indexOf('/api/v1') == 0) {
+    //         return true
+    //       }
+    //       return false
+    //     }
+    //   }
+    // },
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README
     // (https://github.com/webpack/css-loader#sourcemaps)
